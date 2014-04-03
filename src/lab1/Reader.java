@@ -50,7 +50,7 @@ public class Reader {
         // start of writer
         
         boolean append = true;  
-	File datar = new File("src" + File.separatorChar + "practice.txt");
+	File datar = new File("src" + File.separatorChar + "myFile.txt");
 	  
 	PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(datar, append)));
 	  
