@@ -1,12 +1,9 @@
-package lab2;
+package lab3;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -41,23 +38,12 @@ public class Reader {
         // start of writer
         
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("What record do you want to see?");
+        System.out.println("What records city do you want to see?");
         int record = keyboard.nextInt();
-        int begin = record*8 - 8;
-        int end = record*8;
-        // 0 - 7 for one
-        int counter=0;
+        int city = record*8 -5;
         
-        try{
-        for(String str:myList){
-            
-            if(counter>=begin&&counter<end)
-            System.out.println(str);
-            counter++;
-        }
-        } catch (IllegalArgumentException iae){
-            System.out.println("Sorry, there are only " + myList.size()/7 + " entries");
-        }
+        System.out.println(myList.get(city));
+        
     }
        
 }
