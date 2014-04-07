@@ -53,16 +53,21 @@ public class Reader {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("What record do you want to see?");
         int record = keyboard.nextInt();
-        int begin = record*7 - 7;
-        int end = record*7 - 1;
+        int begin = record*8 - 8;
+        int end = record*8;
         // 0 - 7 for one
         int counter=0;
+        
+        try{
         for(String str:myList){
             
-            if(counter>=begin&&counter<=end)
+            if(counter>=begin&&counter<end)
             System.out.println(str);
             counter++;
         }
-    } 
+        } catch (IllegalArgumentException iae){
+            System.out.println("Sorry, there are only " + myList.size()/7 + " entries");
+        }
+    }
        
 }
