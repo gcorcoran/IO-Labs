@@ -45,7 +45,7 @@ public class Reader {
         int record = keyboard.nextInt();
         int begin = record*8 - 8;
         int end = record*8;
-        // 0 - 7 for one
+        // 0 - 8 for one
         int counter=0;
         
         try{
