@@ -80,7 +80,7 @@ public class Reader {
             }
         }
         
-        Set contactSet = new HashSet(contacts);
+        Set <Contact>contactSet = new <Contact>HashSet(contacts);
         contacts = new ArrayList(contactSet);
         
         for(int i=0;i<contacts.size();i++){

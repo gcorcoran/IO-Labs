@@ -32,6 +32,30 @@ public class Contact {
     }
 
     @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 19 * hash + (this.Phone != null ? this.Phone.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Contact other = (Contact) obj;
+        if ((this.Phone == null) ? (other.Phone != null) : !this.Phone.equals(other.Phone)) {
+            return false;
+        }
+        return true;
+    }
+
+    
+    
+    @Override
     public String toString() {
         return "Contact{" + "FirstName=" + FirstName + ", LastName=" + LastName + ", StreetAddress=" + StreetAddress + ", City=" + City + ", State=" + State + ", ZipCode=" + ZipCode + ", Email=" + Email + ", Phone=" + Phone + '}';
     }
